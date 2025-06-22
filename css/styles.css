@@ -664,11 +664,11 @@ section.fade-in {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.5rem;
-  max-height: 300px;
+ /* max-height: 300px;
   overflow-y: auto;
-  /* Styled scrollbar */
+  Styled scrollbar 
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-light) rgba(255, 255, 255, 0.1);
+  scrollbar-color: var(--primary-light) rgba(255, 255, 255, 0.1);*/
 }
 .footer-links ul::-webkit-scrollbar {
   width: 6px;
