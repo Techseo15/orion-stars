@@ -4,10 +4,17 @@
       "source": "/(.*)",
       "destination": "/$1.html"
     }
-  ]
-}
-{
+  ],
   "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
@@ -17,11 +24,11 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none';"
         },
         {
           "key": "Referrer-Policy",
-          "value": "no-referrer-when-downgrade"
+          "value": "strict-origin-when-cross-origin"
         },
         {
           "key": "X-Content-Type-Options",
@@ -31,4 +38,3 @@
     }
   ]
 }
-
